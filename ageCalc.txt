@@ -1,0 +1,41 @@
+Can you give me the code for an html page, with a little CSS to make it pretty,
+and whatever JavaScript, flask  or python you need to make it work.
+
+It would function as an
+
+Age checker driven by todays date
+
+A large bold title "You are 19 if born before:" and 
+
+there would be a line stating "Today is" and today's date
+
+You are 19 if you were born:( and the calculated date )
+
+The calculated date is arrived at by using the systems current date and subtracting 19 years.
+
+Please spell out the day of the week in full text
+
+
+It would be a stand alone app that
+ would not need a server, or a webpage that could be called up
+ from a bookmark in Chrome on an android phone
+
+There  would be a Button  that says "Hit Me"
+
+The button would clear any previous display  and show a new recalculation.
+
+So today, if I hit the button, I'd get 
+
+You are 19 if born before: "December 20, 2005" ( if correct)
+and hold it till hit again or shut down
+
+Yesterday
+
+You are 19 if born before: "December 19, 2005" ( if correct)
+
+
+
+
+
+Ask me questions if you need to, go to code, in a single  html file with imbedded CSS and JS , when you have what you need.
+

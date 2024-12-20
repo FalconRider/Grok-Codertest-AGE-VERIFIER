@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>You are 19 if born before:</h1>
+        <div id="result"></div>
+        <button onclick="calculateAge()">Hit Me</button>
+    </div>
+
+    <script>
+        function calculateAge() {
+            const now = new Date();
+            const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            const nineteenYearsAgo = new Date(today);
+            nineteenYearsAgo.setFullYear(today.getFullYear() - 19);
+
+            // Format the date
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = nineteenYearsAgo.toLocaleDateString('en-US', options);
+
+            // Update the result display
+            document.getElementById('result').innerHTML = `
+                Today is ${today.toLocaleDateString('en-US', options)}<br>
+                You are 19 if you were born on or before: <strong>${formattedDate}</strong>
+            `;
+        }
+
+        // Initial calculation when page loads
+        window.onload = calculateAge;
+    </script>
+</body>
+</html>
